@@ -9,7 +9,7 @@
   ],
     "content_security_policy": "script-src 'self'; object-src 'self'",
     "chrome_url_overrides": {
-        "newtab": "dashboard.html"
+        "newtab": "main.html"
     },
     "icons": {
         "16": "images/favicon.ico",

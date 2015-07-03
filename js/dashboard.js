@@ -22,4 +22,22 @@ angular.module('lms', ['ngRoute'])
                 });
         };
 
+        // get on leave today through API
+        $scope.requestOnLeaveToday = function () {
+            $http({
+                method: 'GET',
+                url: 'http://10.10.11.16:8080/api/onleavetoday',
+                headers: {
+                    'apiKey': 'leapfrog',
+                    'Content-Type': 'application/json'
+                }
+            }).success(function (data) {
+                $scope.employees = data;
+            }).error(function (data) {
+                console.log(data);
+            });
+        };
+
+        $scope.requestOnLeaveToday();
+
     });

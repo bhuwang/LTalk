@@ -15,7 +15,8 @@
         <div class="main today-word">
             <blockquote>
                 <p>{{wordOfDay}}</p>
-                <p><span>- {{author}}</span></p>
+                <p><span>- {{author}}</span>
+                </p>
             </blockquote>
         </div>
         <div class="notification">
@@ -129,18 +130,12 @@
                     <a href="#"><i class="fa fa-calendar"></i> Leave Today</a>
                     <div class="tip bubble">
                         <ul class="leave">
-                            <li class="profile">
-                                <img src="images/sunil-shrestha.jpg" alt="">
+
+                            <li ng-repeat="employee in employees" class="profile">
+                                <img src={{employee.avatarUrl}} alt="">
                                 <h2>
-                                    Sunil Shrestha
-                                    <span>UI UX Department</span>
-                                </h2>
-                            </li>
-                            <li class="profile">
-                                <img src="images/bhuwan-gautam.jpg" alt="">
-                                <h2>
-                                    Bhuwan Gautam
-                                    <span>Java Department</span>
+                                    {{employee.firstName + " "+ (employee.middleName?employee.middleName:'')+" "+employee.lastName}}
+                                    <span>{{employee.department.name}} Department</span>
                                 </h2>
                             </li>
                         </ul>

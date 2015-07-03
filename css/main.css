@@ -54,7 +54,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 7px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: black;
 }
@@ -147,11 +147,35 @@ ul {
   line-height: normal;
 }
 
+blockquote {
+  border-left: 0px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+blockquote p span {
+  display: block;
+}
+
 .notification {
   position: absolute;
   left: 20px;
   top: 20px;
-  width: 20%;
+  width: 300px;
   z-index: 2;
 }
 .notification .form-notify {
@@ -170,6 +194,16 @@ ul {
   padding-bottom: 5px;
   width: 90%;
   border-bottom: 1px white solid;
+}
+.notification .form-notify input:hover, .notification .form-notify input:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
 }
 .notification .notice {
   clear: both;
@@ -200,7 +234,7 @@ ul {
 .sidebar {
   position: absolute;
   right: 20px;
-  top: 30%;
+  top: 35%;
   width: auto;
   z-index: 2;
 }
@@ -213,15 +247,16 @@ ul {
 }
 .sidebar ul li .bubble {
   display: none;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   padding: 20px;
   position: absolute;
   right: 101%;
-  top: 0%;
+  top: -50%;
   width: 320px;
+  z-index: 100;
   visibility: hidden;
   opacity: 0;
-  max-height: 300px;
+  max-height: 350px;
   overflow: hidden;
   overflow-y: auto;
   -moz-border-radius: 7px;
@@ -260,6 +295,23 @@ ul {
 }
 .sidebar ul li a {
   text-decoration: none;
+}
+
+.sidebar .bubble.birthday {
+  background: #e64b3c !important;
+  color: white;
+}
+.sidebar .bubble.birthday .profile {
+  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+}
+.sidebar .bubble.birthday .profile:last-child {
+  border-bottom: 0;
+}
+.sidebar .bubble.birthday .profile img {
+  border: 1px white solid;
+}
+.sidebar .bubble.birthday .profile h2 span {
+  color: white;
 }
 
 .sidebar .leave {

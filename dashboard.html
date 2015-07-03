@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-ng-app="lms" data-ng-csp="">
+<html data-ng-app="dashboard" ng-controller="Dashboard" data-ng-init="init()" data-ng-csp="">
 
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,8 @@
         <div class="main">
             <div class="today-word">
                 <h1>Word of the day </h1>
-                <p>Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind</p>
-                <p><span>- Franklin P. Jones</span></p>
+                <p>{{wordOfDay}}</p>
+                <p><span>- {{author}}</span></p>
             </div>
         </div>
         <div class="notification">
@@ -100,6 +100,7 @@
     <script src="./js/jquery-1.9.1.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/custom.js"></script>
+    <script src="./js/dashboard.js"></script>
 </body>
 
 </html>

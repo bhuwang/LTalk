@@ -1,0 +1,105 @@
+<!doctype html>
+<html data-ng-app="lms" data-ng-csp="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LTalk Homepage</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container home">
+        <div class="main">
+            <div class="today-word">
+                <h1>Word of the day </h1>
+                <p>Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind</p>
+                <p><span>- Franklin P. Jones</span></p>
+            </div>
+        </div>
+        <div class="notification">
+            <form class="form-notify">
+                <i class="fa fa-bell"></i>
+                <input type="text" id="notification" placeholder="Notification" autocomplete="off">
+            </form>
+            <div class="notice">
+                @all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building
+                <img src="images/profile-img.png" alt="Profile" class="e-profile">
+            </div>
+            <div class="notice">
+                Please send your team name and member list ASAP.
+                <img src="images/profile-img.png" alt="Profile" class="e-profile">
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#"><i class="fa fa-eye"></i> Core Value</a>
+                    <div class="bubble">
+                        <ul class="tabs-menu">
+                            <li class="current"><a href="#tab-1">Core Value</a></li>
+                            <li><a href="#tab-2">Mission</a></li>
+                            <li><a href="#tab-3">Philosophy</a></li>
+                        </ul>
+                        <div class="tab">
+                            <div id="tab-1" class="tab-content">
+                                <ul>
+                                    <li>Respect, Transparency and Integrity</li>
+                                    <li>Respect individuals regardless of creed, religion, color, gender or position.</li>
+                                    <li>Encourage people to voice opinions, especially dissenting one's. </li>
+                                    <li>Be honest and direct in our opinions but be humble.</li>
+                                    <li>Do not do anything that we need to hide.</li>
+                                    <li>When in doubt, shout out loud.</li>
+                                    <li>Walk the talk, take responsibility for our actions</li>
+                                    <li>Foster friendship, support and trust among our Leapfrog families.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-2" class="tab-content">
+                                2        
+                            </div>
+                            <div id="tab-3" class="tab-content">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-birthday-cake"></i> Birthday</a>
+                    <div class="bubble">
+                        Birthday
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-calendar"></i> Leave Today</a>
+                    <div class="bubble">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#" class="ft-logo">LTalk</a></li>
+            <li>
+                <div ng-controller="MainCtrl">
+                    <div id="datetime">
+                        {{ date.raw | date:'hh mm ss' }}
+                        {{ date.raw | date:'EEEE, MMMM yyyy' }}
+                    </div>
+                </div>
+            </li>
+            <li>Ashad 15 - National Paddy Day / Curd and Beaten Rice Eating Day</li>
+        </ul>
+    </footer>
+    <div class="div-block"></div>
+    <script src="./js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular-route.min.js"></script>
+    <script src="./js/jquery-1.9.1.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>

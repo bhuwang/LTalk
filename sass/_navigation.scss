@@ -1,0 +1,63 @@
+.sidebar .tabs-menu {
+    width: $width-default;
+    margin: 0; padding: 0;
+    li {
+        list-style: none;
+        float: left;
+        font-size: 12px;
+        padding: 10px 0; margin: 0;
+        line-height: normal !important;
+        border-bottom: 1px $global-gray solid;
+        text-transform: uppercase;
+        &.current {
+            position: relative;
+            color: $global-white;
+            z-index: 5;
+            border-bottom: 2px $global-white solid;
+            a {
+                color: $global-white;
+            }
+        }
+        a {
+            color: $lightgray;
+            font-size: 12px;
+            margin-right:20px;
+            text-decoration: none; 
+        }
+    }
+}
+
+.tab {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tab-content {
+    display: block;
+    width: $width-default;
+    clear: both;
+    padding: 20px 0;
+    display: none;
+
+    form{
+        width: $width-default;
+        input{
+            width: 50%;
+            border:0;
+            font-size: 20px;
+            padding: 5px 0;
+            background: transparent;
+            border-bottom: 1px rgba(255,255,255,0.2) solid;
+
+            &:hover,&:focus{
+                @include x-boxshadow(none);
+                @include x-appearance(none);
+                width: $width-default;
+            }
+        }
+    }
+}
+
+#tab-1 {
+ display: block;   
+}

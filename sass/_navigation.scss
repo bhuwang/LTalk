@@ -4,8 +4,9 @@
     li {
         list-style: none;
         float: left;
+        width: 50%;
         font-size: 12px;
-        padding: 10px 0; margin: 0;
+        padding: 15px 0; margin: 0;
         line-height: normal !important;
         border-bottom: 1px $global-gray solid;
         text-transform: uppercase;
@@ -13,7 +14,7 @@
             position: relative;
             color: $global-white;
             z-index: 5;
-            border-bottom: 2px $global-white solid;
+            border-bottom: 1px $global-white solid;
             a {
                 color: $global-white;
             }
@@ -38,11 +39,14 @@
     clear: both;
     padding: 20px 0;
     display: none;
-
+    font-size: 12px;
+    p{
+        line-height: normal;
+    }
     form{
         width: $width-default;
         input{
-            width: 50%;
+            //width: 50%;
             border:0;
             font-size: 20px;
             padding: 5px 0;

@@ -9,7 +9,7 @@ body{
     color: $global-white;
     outline: none;
     overflow: hidden;
-    font: 300 $base-font-size $global-font;
+    font: 400 $base-font-size $global-font;
 }
 
 a {
@@ -343,6 +343,7 @@ footer{
     padding:20px;
     color: $global-white;
     width: $width-default;
+    text-shadow: 0 0 1px #000;
     a{
         color: $global-white;
     }

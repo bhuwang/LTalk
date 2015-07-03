@@ -3,11 +3,18 @@
     "name": "LTalk",
     "description": "LTalk - Your Companion",
     "version": "0.1",
+    "oauth2": {
+    "client_id": "329152280119-ergpn5gjq8hfkf6ru97rfl3dckfkcoph.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },"key": "nhpflphejbokhoeegcphcpgdjlnnnipe",
     "permissions": [
-    "http://api.wunderground.com/api/",
-    "http://autocomplete.wunderground.com/api"
-  ],
-    "content_security_policy": "script-src 'self'; object-src 'self'",
+		"identity",
+		"https://ssl.gstatic.com/",
+		"https://www.googleapis.com/",
+		"https://accounts.google.com/"],
+		"content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
     "chrome_url_overrides": {
         "newtab": "main.html"
     },

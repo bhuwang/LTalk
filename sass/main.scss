@@ -158,12 +158,12 @@ ul{
 .notification{
     position: absolute;
     left: 20px; top: 20px;
-    width: 300px;
+    width: 290px;
+    padding-right:10px;
     z-index: 2;
     .form-notify{
         font-size: 16px;
         margin-bottom: 15px;
-        width: $width-default;
         .fa{
             float: left;
             font-size: 24px;
@@ -185,12 +185,11 @@ ul{
     }
     .notice{
         overflow: hidden;
-        width: 300px;
         max-height: 400px;
         color: $lightgray;
+        width: 300px; padding-right: 10px;
         &:hover{
             overflow-y: auto;
-            padding-right: 10px;
             @include x-transition(all 0.3s ease-in-out);
         }
         li{
@@ -240,6 +239,8 @@ ul{
                     right: 110%;
                     z-index: 100;
                     width: 300px;
+                    max-height: 400px;
+                    overflow: hidden;
                     top:-20%;
                     @include border-radius(4px);
                     &:before {
@@ -264,13 +265,16 @@ ul{
                         border-right: 12px solid transparent;
                         content: '';
                     }
+                    &:hover{
+                        overflow-y: scroll;
+                    }
                 }
 
                 .tip.bubble:before {
                     border-top: 14px solid transparent;
-                    //border-left: 14px solid rgba(0,0,0,0.9);
+                    border-left: 14px solid rgba(0,0,0,0.9);
                     border-bottom: 14px solid transparent;
-                    //border-left-color: rgba(0, 0, 0, 0.2);
+                    border-left-color: rgba(0, 0, 0, 0.2);
                     right: -28px;
                     top: 20px;
                 }

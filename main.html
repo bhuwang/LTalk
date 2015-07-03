@@ -3,18 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LMS-Home</title>
+    <title>LTalk-Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <div class="container">
-        <div ng-controller="MainCtrl">
-            <div id="datetime">
-                <h1>{{ date.raw | date:'hh mm ss' }}</h1>
-                <h2>{{ date.raw | date:'EEEE, MMMM yyyy' }}</h2>
-            </div>
+        <div class="login-box">
+            <a href="javascript:;"><img src="images/logo.png" alt="Logo of Leapfrog"></a>
+            <a href="#" class="btn btn-login">Login</a>
         </div>
     </div>
     <script src="./js/vendor/angular.min.js"></script>

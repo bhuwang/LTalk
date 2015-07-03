@@ -14,13 +14,22 @@ angular.module('lms', ['ngRoute'])
         // Kick off the update function
         updateTime();
 
-        $scope.init = function () {
-            $http.get("http://api.theysaidso.com/qod")
-                .success(function (response) {
-                    $scope.wordOfDay = response.contents.quotes[0].quote;
-                    $scope.author = response.contents.quotes[0].author
-                });
+        $scope.wordOfDay = function () {
+            $http({
+                method: 'GET',
+                url: 'http://10.10.11.16:8080/api/quoteoftheday',
+                headers: {
+                    'apiKey': 'leapfrog',
+                    'Content-Type': 'application/json'
+                }
+            }).success(function (data) {
+                $scope.wordOfDay = response.contents.quotes[0].quote;
+                $scope.author = response.contents.quotes[0].author
+            }).error(function (data) {
+                console.log(data);
+            });
         };
+        $scope.wordOfDay();
 
         // get on leave today through API
         $scope.requestOnLeaveToday = function () {

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "LMS-Home",
+    "description": "Leapfrog Management System - Home",
+    "version": "0.1",
+    "permissions": [
+    "http://api.wunderground.com/api/",
+    "http://autocomplete.wunderground.com/api"
+  ],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "chrome_url_overrides": {
+        "newtab": "main.html"
+    },
+    "icons": {
+        "16": "images/favicon.ico",
+        "128": "images/logo.png"
+    }
+}

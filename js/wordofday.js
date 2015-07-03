@@ -1,7 +1,7 @@
 angular.module('word', [])
     .controller('WordOfDay', function ($scope, $http) {
 
-      $scope.getWord = function() {
+      $scope.init = function() {
     //   var xhr = new XMLHttpRequest();
     //   xhr.open("GET", "http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
     //   xhr.onreadystatechange = function() {

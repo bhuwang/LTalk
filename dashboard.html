@@ -13,12 +13,10 @@
 <body ng-controller="Dashboard">
     <div class="container home">
         <div class="main">
-            <div class="today-word">
-                <h1>Word of the day </h1>
+            <blockquote  class="today-word">
                 <p>{{wordOfDay}}</p>
-                <p><span>- {{author}}</span>
-                </p>
-            </div>
+                <p><span>- {{author}}</span></p>
+            </blockquote>
         </div>
         <div class="notification">
             <form class="form-notify">
@@ -86,8 +84,23 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-birthday-cake"></i> Birthday</a>
-                    <div class="bubble">
-                        Birthday
+                    <div class="bubble birthday">
+                        <ul class="leave">
+                            <li class="profile">
+                                <img src="images/sunil-shrestha.jpg" alt="">
+                                <h2>
+                                    Sunil Shrestha
+                                    <span>UI UX Department</span>
+                                </h2>
+                            </li>
+                            <li class="profile">
+                                <img src="images/bhuwan-gautam.jpg" alt="">
+                                <h2>
+                                    Bhuwan Gautam
+                                    <span>Java Department</span>
+                                </h2>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>

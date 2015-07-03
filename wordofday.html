@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="word" ng-controller="WordOfDay" data-ng-csp="">
+<head>
+    <title>Word of the day</title>
+  
+</head>
+<body>
+    Click here to get the word of the day
+    
+    <input type="button" ng-model="sometext" value="click" ng-click="getWord()"/>
+    
+     <br/>
+      <br/>
+      
+    Word of the Day is   {{word}}
+
+    <script src="./js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular-route.min.js"></script>
+    <script src="./js/WordOfday.js"></script>
+</body>
+
+</html>

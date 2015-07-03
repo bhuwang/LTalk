@@ -1,20 +1,31 @@
-html,body{
-    height: 100%;
-}
-body{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font: 14px 'Roboto', sans-serif;
-}
-.container{
-    background: #000 url("../images/bg-img.jpg") no-repeat center top;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: relative;
+/* --------------------------------------------------------
+Style Sheet for LTalk
+
+version: 1.0
+last modified: 07.03.2015 by yesubc@gmail.com
+author: Bhuwan Gautam
+website: https://github.com/bhuwang/LTalk
+----------------------------------------------------------*/
+html, body {
+  height: 100%;
 }
 
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 14px "Roboto", sans-serif;
+}
+
+.container {
+  background: black url("../images/bg-img.jpg") no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 a {
   color: #666666;
@@ -25,66 +36,66 @@ a {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-  a:hover, a:focus {
-    color: #4cb95b;
-    text-decoration: underline;
-    outline: none;
+a a:hover, a a:focus {
+  color: #4cb95b;
+  text-decoration: underline;
+  outline: none;
 }
 
-.div-block{
-    background: rgba(0,0,0,0.1);
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;
-    height: 100%;
+.div-block {
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.login-box{
-    background: rgba(255,255,255,0.1);
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    max-width: 280px;
-    padding: 55px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    /*margin-top: -50px;
-    margin-left: -50px;*/
-    text-align: center;
-    transform: translate(-50%, -50%);
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  max-width: 280px;
+  padding: 55px;
+  position: fixed;
+  top: 46%;
+  left: 46%;
+  z-index: 1;
+  margin-top: -50px;
+  margin-left: -50px;
+  text-align: center;
+  -webkit-appearance: translate(-50%, -50%);
+  -moz-appearance: translate(-50%, -50%);
+  appearance: translate(-50%, -50%);
 }
-
-.login-box img{
-    margin-bottom: 50px;
+.login-box img {
+  margin-bottom: 50px;
 }
-
-.btn-login{
-    background: #bdbec0;
-    border-radius: 15px;
-    padding: 0 35px;
-    line-height: 30px;
-    text-align: center;
-    color: #333;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
+.login-box .btn-login {
+  background: #bdbec0;
+  border-radius: 15px;
+  padding: 0 35px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
 }
-
-.btn-login:hover{
-    background: #6cc067;
-    color: #fff;
+.login-box .btn-login:hover {
+  background: #6cc067;
+  color: white;
 }
 
 #datetime {
-    text-align: center;
+  text-align: center;
 }
 
 #datetime h1 {
-    font-size: 6.1em;
+  font-size: 6.1em;
 }
 
 #datetime h2 {
-    font-size: 1.0em;
+  font-size: 1.0em;
 }

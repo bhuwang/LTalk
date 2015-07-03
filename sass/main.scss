@@ -1,0 +1,87 @@
+@import "_variables";
+@import "_mixin";
+
+html,body{
+    height: 100%;
+}
+body{
+    @include box-sizing(border-box);
+    font: $base-font-size $global-font;
+}
+.container{
+    background: #000 url("../images/bg-img.jpg") no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+a {
+  color: $global-gray;
+  text-decoration: none;
+  @include x-transition(all 0.3s ease-in-out);
+
+    a:hover, a:focus {
+        color: #4cb95b;
+        text-decoration: underline;
+        outline: none;
+    }
+}
+
+.div-block{
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box{
+    background: rgba(255,255,255,0.1);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    max-width: 280px;
+    padding: 55px;
+    position: fixed;
+    top: 46%;
+    left: 46%;
+    z-index: 1;
+    margin-top: -50px;
+    margin-left: -50px;
+    text-align: center;
+    @include x-appearance(translate(-50%, -50%));
+    img{
+        margin-bottom: 50px;
+    }
+
+    .btn-login{
+        background: #bdbec0;
+        border-radius: 15px;
+        padding: 0 35px;
+        line-height: 30px;
+        text-align: center;
+        color: #333;
+        display: inline-block;
+        text-decoration: none;
+        font-size: $base-font-size+2;
+        text-transform: uppercase;
+
+        &:hover{
+            background: #6cc067;
+            color: $global-white;
+        }
+    }
+}
+
+#datetime {
+    text-align: center;
+}
+
+#datetime h1 {
+    font-size: 6.1em;
+}
+
+#datetime h2 {
+    font-size: 1.0em;
+}

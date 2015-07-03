@@ -1,0 +1,292 @@
+::-webkit-input-placeholder, 
+::-moz-placeholder, 
+:-ms-input-placeholder,
+/* FF 18 */
+::-moz-placeholder,
+/* FF 19+ */
+:-ms-input-placeholder,
+input:-moz-placeholder,
+.placeholder {
+  color: #a2a2a2;
+}
+
+input:not([type="checkbox"]), select, textarea{
+  color: $global-gray;
+  font: $base-font-size $global-font-light;
+  border: 1px $lightgray solid;
+  padding: 10px;
+  background-color: $global-white;
+  @include box-sizing(border-box);
+  @include x-transition(border-color 0.3s);
+  @include x-boxshadow(none);
+  //@include x-appearance(none);
+  @extend .roundedborder;
+}
+
+input:not([type="checkbox"]), select, textarea{
+		&:hover{
+			border-color: #b9b9b9;
+		}
+		&:active, &:focus{
+			border-color: $global-blue;
+			/*background: rgba(238, 236, 240, 0.2);
+			@include x-boxshadow(0 1px 5px rgba(0,0,0,0.3) inset);*/
+		} 
+	}
+input:not([type="checkbox"]), button{
+	width: $width-default;
+	@include box-sizing(border-box);
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+  height: 40px;
+  padding-right: 20px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  @extend .roundedborder;
+  @include x-boxshadow(none);
+  @include x-appearance(none);
+  background: $global-white url('../images/down.png') no-repeat 95% center;
+}
+
+select:disabled{
+  background-color: $fadelight;
+}
+
+/* Submit Button */
+button, input[type='submit'], input[type='button'], a.button, .button{
+  background: $global-blue;
+  color: $global-white;
+  padding: 10px 20px;
+  border: 1px transparent solid;
+  font: 18px $global-font-light;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(0,0,0,0.15);
+  @extend .roundedborder;
+  &:hover {
+    background: $global-blue-hover;
+    /*box-shadow: inset 0 -2px rgba(255,255,255,0.1), inset 0 -3px rgba(0,0,0,0.1), 0 1px rgba(0,0,0,0.05);*/
+  }
+  &:focus{
+    background: $global-blue-focus;
+  }
+}
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner, 
+.button::-moz-focus-inner { 
+  border: 0; 
+}
+
+label{
+	input[type="checkbox"],input[type="radio"]{
+		position: relative;
+		top: -2px;
+		}
+	}
+	
+.required {
+  border: 1px solid red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.input-tiny {
+  width: 50px;
+}
+
+.input-small {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.text-small{
+  font-size: 13px;
+}
+
+.input-medium {
+  width: 150px;
+}
+
+.input-arge {
+  width: 200px;
+}
+
+.input-xlarge {
+  width: 250px;
+}
+
+.input-xxlarge {
+  width: 300px;
+}
+
+.input-full {
+  width: $width-default;
+}
+
+
+
+/* Validation Message */
+.msg-box {
+  padding:7px 10px 7px 35px;
+  margin-bottom:15px;
+  position:relative;
+  color:#444;
+  font-size: 12px;
+  min-height: 30px;
+  overflow:hidden;
+  @extend .roundedborder;
+    ul{
+      margin: 0; padding: 0;
+    }
+}
+.msg-box:after{
+  content: "";
+  display: table;
+}
+
+.msg-error {
+  background:#F2DEDE url("../images/icon-error.png") no-repeat 10px;
+  border:1px solid #AE432E;
+  color: #A94442;
+}
+
+.msg-alert {
+  background:#FCF8E3 url("../images/icon-alert.png") no-repeat 10px;
+  border:1px solid #FAEBCC;
+  color: #e6c26e;
+}
+
+.msg-info {
+  background:#D9EDF7 url("../images/icon-info.png") no-repeat 10px;
+  border:1px solid #BCE8F1;
+  color: #31708F;
+}
+.msg-succeess {
+  background:#DFF0D8 url("../images/icon-ok.png") no-repeat 10px;
+  border: 1px solid #D6E9C6;
+  color: #3C763D;
+}
+
+.msg-box .msg-close {
+  position:absolute;
+  top:2px;
+  right:2px;
+  cursor:pointer;
+}
+
+
+/* Badge Notification */
+.notification { 
+  padding:2px 6px;
+  font-size:10px;
+  color:$global-white; 
+  border-radius: 4px;
+}
+.ok-bg {background:#6a9912}
+.alert-bg {background:#F5AA1A}
+.info-bg {background:#058dc7}
+.error-bg {background:#ae432e}
+.neutral-bg {background:#929494}
+
+/* Text Truncate */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+
+/* Input Range */
+input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 300px;
+    &:hover,&:focus{
+      border-color: transparent;
+      @include x-boxshadow(none);
+    }
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $global-gold;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $global-gold;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $global-gold;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}

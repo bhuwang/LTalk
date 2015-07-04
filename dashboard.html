@@ -25,36 +25,9 @@
                 <input type="text" id="notification" placeholder="Notification" autocomplete="off">
             </form>
             <ul class="notice">
-                <li>
-                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
-                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
-                    </p>
-                </li>
-                <li>
-                    <p>Please send your team name and member list ASAP.
-                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
-                    </p>
-                </li>
-                <li>
-                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
-                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
-                    </p>
-                </li>
-                <li>
-                    <p>Please send your team name and member list ASAP.
-                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
-                    </p>
-                </li>
-                <li>
-                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
-                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
-                    </p>
-                </li>
-                <li>
-                    <p>Please send your team name and member list ASAP.
-                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
-                    </p>
-                </li>
+            <li ng-repeat="highlight in highlightsData">
+                    <p> {{highlight.message}} </p>
+            </li>
             </ul>
         </div>
 

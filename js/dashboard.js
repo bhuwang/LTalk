@@ -29,7 +29,7 @@ angular.module('lms', ['ngRoute'])
                 console.log(data);
             });
         };
-        $scope.wordOfDay();
+        // $scope.wordOfDay();
 
         // get on leave today through API
         $scope.requestOnLeaveToday = function () {
@@ -68,4 +68,31 @@ angular.module('lms', ['ngRoute'])
 
         $scope.birthdayToday();
 
+        // Display highlights of the day
+        $scope.displayHighlights = function (data) {
+          var data = '[{"message":"Hello Code for Fun, Are you ready?", "lastUpdated": "2015-07-06T00:28:43Z"},{"message":"Dear All, Please be informed that you need to withdraw your quarterly budget by tomorrow", "lastUpdated": "2015-07-06T00:28:43Z"}] '
+          $scope.highlightsData = jQuery.parseJSON( data);
+        };
+
+        $scope.getHighlights = function () {
+            // $http({
+            //     method: 'GET',
+            //     url: 'http://10.10.11.16:8080/api/getHighlights'
+            //     headers: {
+            //         'apiKey': 'leapfrog',
+            //         'Content-Type': 'application/json'
+            //     }
+            // }).success(function (data) {
+            //     console.log(data);
+            //     $scope.displayHighlights(data);
+            // }).error(function (data) {
+            //     console.log(data);
+            // });
+        $scope.displayHighlights("test");
+        };
+        $scope.getHighlights();
+
+        $scope.pushHighlights = function () {
+
+        };
     });

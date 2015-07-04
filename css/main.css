@@ -499,19 +499,19 @@ footer {
   left: 0;
   bottom: 0;
   z-index: 1;
-  font-size: 60px;
   padding: 20px;
   overflow: hidden;
   text-align: center;
   color: white;
   width: 100%;
-  text-shadow: 0px 0px 10px #000;
+  text-shadow: 1px 1px 0px #000;
 }
 footer a {
   color: white;
 }
 footer ul {
   text-align: center;
+  font-size: 60px;
 }
 footer ul li {
   display: inline-block;
@@ -534,4 +534,11 @@ footer ul li:nth-child(2) {
   position: absolute;
   left: 20px;
   bottom: 20px;
+}
+
+#datetime span {
+  padding-top: 10px;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
 }

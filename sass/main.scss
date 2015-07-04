@@ -405,18 +405,18 @@ footer{
     left: 0;
     bottom: 0;
     z-index: 1;
-    font-size: 60px;
     padding:20px;
     overflow: hidden;
     text-align: center;
     color: $global-white;
     width: $width-default;
-    text-shadow: 0px 0px 10px #000;
+    text-shadow: 1px 1px 0px #000;
     a{
         color: $global-white;
     }
     ul{
         text-align: center;
+        font-size: 60px;
         li{
             display: inline-block;
             list-style: none;
@@ -437,4 +437,14 @@ footer{
     text-indent: -9999px;
     display: inline-block;
     position: absolute; left: 20px; bottom: 20px;
+}
+
+
+#datetime{
+    span{
+        padding-top: 10px;
+        font-size: 18px;
+        display: block;
+        text-transform: uppercase
+    }
 }

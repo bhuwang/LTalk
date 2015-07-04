@@ -51,8 +51,11 @@ ul{
 }
 
 .container{
-    background: #000 url("../images/bg-img.jpg") no-repeat center top;
-    background-size: cover;
+    background: #000 url("../images/bg-img-1.jpg") no-repeat center top;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     width: $width-default;
     height: $width-default;
     vertical-align: middle;
@@ -68,7 +71,7 @@ ul{
 }
 
 .div-block{
-    background: rgba(0,0,0,0.1) url("../images/pattern.png");
+    background: rgba(0,0,0,0.3) url("../images/pattern.png");
     position: absolute;
     left: 0; top: 0;
     width: $width-default;
@@ -167,6 +170,7 @@ ul{
     .form-notify{
         font-size: 16px;
         margin-bottom: 15px;
+        overflow: hidden;
         .fa{
             float: left;
             font-size: 24px;
@@ -204,7 +208,7 @@ ul{
         }
         li{
             clear: both; 
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.3);
             padding: 10px;
             @include border-radius(7px);
             font-size: 12px;
@@ -310,7 +314,7 @@ ul{
                     opacity: 1;
                     .tab-content {
                         min-height: 100px;
-                        max-height: 270px;
+                        height: 300px;
                         overflow: hidden;
                         -webkit-overflow-scrolling:touch;
                         &:hover{
@@ -436,7 +440,6 @@ footer{
             display: inline-block;
             list-style: none;
             line-height: 40px;
-            margin-right: 35px;
             &:nth-child(2){
                 padding-left: 200px;
             }

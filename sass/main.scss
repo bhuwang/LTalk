@@ -13,7 +13,6 @@ body{
     @include box-sizing(border-box);
     color: $global-white;
     outline: none;
-    overflow: hidden;
     font: 400 $base-font-size $global-font;
 }
 
@@ -56,6 +55,7 @@ ul{
     background-size: cover;
     width: $width-default;
     height: $width-default;
+    vertical-align: middle;
     position: relative;
 
     &.home{
@@ -68,7 +68,7 @@ ul{
 }
 
 .div-block{
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.1) url("../images/pattern.png");
     position: absolute;
     left: 0; top: 0;
     width: $width-default;
@@ -149,8 +149,10 @@ ul{
         }
         p {
             display: inline;
+            margin: 0; padding: 0;
             span{
                 display: block;
+                padding-top:10px;
             }
         }
     }
@@ -192,6 +194,7 @@ ul{
     }
     .notice{
         overflow: hidden;
+        -webkit-overflow-scrolling:touch;
         max-height: 400px;
         color: $lightgray;
         width: 300px; padding-right: 10px;
@@ -236,68 +239,71 @@ ul{
             margin-bottom: 35px;
             font-size: 14px;
             position: relative;
+            a{
+                color: rgba(255,255,255,0.5);
+            }
+            .tip {
+                background: rgba(0,0,0,0.9);
+                min-height: 100px;
+                color: $global-white;
+                padding: 0 20px;
+                position: absolute;
+                display: none;
+                opacity: 0;
+                right: 110%;
+                z-index: 100;
+                width: 300px;
+                top:-20%;
+                @include border-radius(4px);
+
+                &:before {
+                    position: absolute;
+                    top: -50%;
+                    right: 98px;
+                    display: inline-block;
+                    border-left: 14px solid transparent;
+                    border-bottom: 14px solid rgba(0,0,0,0.9);
+                    border-right: 14px solid transparent;
+                    border-bottom-color: rgba(0, 0, 0, 0.2);
+                    content: '';
+                }
+
+                &:after {
+                    position: absolute;
+                    top: -50%;
+                    right: 99px;
+                    display: inline-block;
+                    border-left: 12px solid transparent;
+                    border-bottom: 12px solid rgba(0,0,0,0.9);
+                    border-right: 12px solid transparent;
+                    content: '';
+                }
+            }
+
+            .tip.bubble:before {
+                border-top: 14px solid transparent;
+                border-left: 14px solid rgba(0,0,0,0.9);
+                border-bottom: 14px solid transparent;
+                border-left-color: rgba(0, 0, 0, 0.2);
+                right: -28px;
+                top: 20px;
+            }
+
+            .tip.bubble:after {
+                border-top: 12px solid transparent;
+                border-left: 12px solid rgba(0,0,0,0.9);
+                border-bottom: 12px solid transparent;
+                right: -24px;
+                top: 22px;
+            }
             &:hover{
                 i{
                     background: rgba(255,255,255,1);
                     color: $global-black;
                 }
                 a{
-                    color: $global-gray;
+                    color: rgba(255,255,255,1);
                 }
-            }
-                .tip {
-                    background: rgba(0,0,0,0.9);
-                    color: $global-white;
-                    padding: 0 20px;
-                    position: absolute;
-                    display: none;
-                    opacity: 0;
-                    right: 110%;
-                    z-index: 100;
-                    width: 300px;
-                    top:-20%;
-                    @include border-radius(4px);
-                    &:before {
-                        position: absolute;
-                        top: -50%;
-                        right: 98px;
-                        display: inline-block;
-                        border-left: 14px solid transparent;
-                        border-bottom: 14px solid rgba(0,0,0,0.9);
-                        border-right: 14px solid transparent;
-                        border-bottom-color: rgba(0, 0, 0, 0.2);
-                        content: '';
-                    }
-
-                    &:after {
-                        position: absolute;
-                        top: -50%;
-                        right: 99px;
-                        display: inline-block;
-                        border-left: 12px solid transparent;
-                        border-bottom: 12px solid rgba(0,0,0,0.9);
-                        border-right: 12px solid transparent;
-                        content: '';
-                    }
-                }
-
-                .tip.bubble:before {
-                    border-top: 14px solid transparent;
-                    border-left: 14px solid rgba(0,0,0,0.9);
-                    border-bottom: 14px solid transparent;
-                    border-left-color: rgba(0, 0, 0, 0.2);
-                    right: -28px;
-                    top: 20px;
-                }
-
-                .tip.bubble:after {
-                    border-top: 12px solid transparent;
-                    border-left: 12px solid rgba(0,0,0,0.9);
-                    border-bottom: 12px solid transparent;
-                    right: -24px;
-                    top: 22px;
-                }
-            &:hover{
                 .bubble{
                     display: block;
                     visibility: visible;
@@ -306,6 +312,7 @@ ul{
                         min-height: 100px;
                         max-height: 270px;
                         overflow: hidden;
+                        -webkit-overflow-scrolling:touch;
                         &:hover{
                             overflow-y: scroll;
                         }

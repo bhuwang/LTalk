@@ -22,7 +22,6 @@ body {
   box-sizing: border-box;
   color: white;
   outline: none;
-  overflow: hidden;
   font: 400 14px "Roboto", sans-serif;
 }
 
@@ -75,6 +74,7 @@ ul {
   background-size: cover;
   width: 100%;
   height: 100%;
+  vertical-align: middle;
   position: relative;
 }
 .container.home {
@@ -86,7 +86,7 @@ ul {
 }
 
 .div-block {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1) url("../images/pattern.png");
   position: absolute;
   left: 0;
   top: 0;
@@ -172,9 +172,12 @@ ul {
 }
 .today-word blockquote p {
   display: inline;
+  margin: 0;
+  padding: 0;
 }
 .today-word blockquote p span {
   display: block;
+  padding-top: 10px;
 }
 
 .notification {
@@ -221,6 +224,7 @@ ul {
 }
 .notification .notice {
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   max-height: 400px;
   color: #cccccc;
   width: 300px;
@@ -274,15 +278,12 @@ ul {
   font-size: 14px;
   position: relative;
 }
-.sidebar ul li:hover i {
-  background: white;
-  color: black;
-}
-.sidebar ul li:hover a {
-  color: #666666;
+.sidebar ul li a {
+  color: rgba(255, 255, 255, 0.5);
 }
 .sidebar ul li .tip {
   background: rgba(0, 0, 0, 0.9);
+  min-height: 100px;
   color: white;
   padding: 0 20px;
   position: absolute;
@@ -332,6 +333,13 @@ ul {
   right: -24px;
   top: 22px;
 }
+.sidebar ul li:hover i {
+  background: white;
+  color: black;
+}
+.sidebar ul li:hover a {
+  color: white;
+}
 .sidebar ul li:hover .bubble {
   display: block;
   visibility: visible;
@@ -341,6 +349,7 @@ ul {
   min-height: 100px;
   max-height: 270px;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .sidebar ul li:hover .bubble .tab-content:hover {
   overflow-y: scroll;

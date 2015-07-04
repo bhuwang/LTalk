@@ -10,7 +10,6 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-
 <body ng-controller="Dashboard">
     <div class="container home">
         <div class="main today-word">
@@ -25,9 +24,9 @@
                 <input type="text" id="notification" placeholder="Notification" autocomplete="off">
             </form>
             <ul class="notice">
-            <li ng-repeat="highlight in highlightsData">
-                    <p> {{highlight.message}} </p>
-            </li>
+                <li ng-repeat="highlight in highlightsData">
+                    {{highlight.message}}
+                </li>
             </ul>
         </div>
 

@@ -1,9 +1,14 @@
 @import "_variables";
 @import "_mixin";
 
+*{
+    outline: none;
+}
+
 html,body{
     height: 100%;
 }
+
 body{
     @include box-sizing(border-box);
     color: $global-white;
@@ -29,31 +34,28 @@ ul{
 }
 
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
     //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 4px;
+    @include border-radius(4px);
     background-color: transparent;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     width: 5px;
     background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb
-{
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+::-webkit-scrollbar-thumb {
+    @include border-radius(4px);
+    @include x-boxshadow(inset 0 0 6px rgba(0,0,0,.3));
     background-color: rgba(255,255,255,0.1);
 }
 
 .container{
     background: #000 url("../images/bg-img.jpg") no-repeat center top;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: $width-default;
+    height: $width-default;
     position: relative;
 
     &.home{
@@ -179,6 +181,12 @@ ul{
             &:hover,&:focus{
                 @include x-appearance(none);
                 @include x-boxshadow(none);
+            }
+            &:hover{
+                border-bottom-color: rgba(255,255,255,0.3);
+            }
+            &:focus{
+                border-bottom-color: rgba(255,255,255,0.5);
             }
         }
     }

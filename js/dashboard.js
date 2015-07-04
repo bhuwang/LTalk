@@ -15,6 +15,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         // Kick off the update function
         updateTime();
 
+        //populate word of the day
         $scope.wordOfDay = function () {
             $http({
                 method: 'GET',
@@ -32,7 +33,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         };
         $scope.wordOfDay();
 
-        // get on leave today through API
+        // populate today's leave
         $scope.requestOnLeaveToday = function () {
             $http({
                 method: 'GET',
@@ -50,7 +51,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
 
         $scope.requestOnLeaveToday();
 
-        // get birthday today through API
+        // populate today's birthday
         $scope.birthdayToday = function () {
             $http({
                 method: 'GET',
@@ -70,6 +71,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.birthdayToday();
 
 
+        // populate highlights of the day
         $scope.getHighlights = function () {
              $http({
                 method: 'GET',
@@ -81,43 +83,28 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
             }).success(function (data) {
                 console.log(data);
                 $scope.highlightsData = data
-                $timeout($scope.getHighlights,10000);
+                $timeout($scope.getHighlights,5000);
             }).error(function (data) {
                 console.log(data);
             });
         };
         $scope.getHighlights();
 
+        // push new highlights
         $scope.pushHighlights = function () {
             $http({
                 method: 'POST',
-                url: 'http://10.10.11.16:8080/api/pushHighlights',
-                data: $.param({highlight: $scope.notification}),
+                url: 'http://10.10.11.16:8080/api/pushhighlights?message='+$scope.notification,
                 headers: {
-                    'apiKey': 'leapfrog',
-                    'Content-Type': 'application/json'
+                    'apiKey': 'leapfrog'
                 }
 
             }).success(function (data) {
                 console.log(data);
+                $scope.notification = "";
             }).error(function (data) {
                 console.log(data);
             });
         };
 
-   
-    });
-
-// myDashboard.directive('ngEnter', function () {
-//     return function (scope, element, attrs) {
-//         element.bind("keydown keypress", function (event) {
-//             if(event.which === 13) {
-//                 scope.$apply(function (){
-//                     scope.$eval(attrs.ngEnter);
-//                 });
-
-//                 event.preventDefault();
-//             }
-//         });
-
-//     }};
+       });

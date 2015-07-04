@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LTalk Homepage</title>
+    <title>LTalk Dashboard</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body ng-controller="Dashboard">
@@ -15,8 +16,7 @@
         <div class="main today-word">
             <blockquote>
                 <p>{{wordOfDay}}</p>
-                <p><span>- {{author}}</span>
-                </p>
+                <p><span>- {{author}}</span></p>
             </blockquote>
         </div>
         <div class="notification">
@@ -110,16 +110,11 @@
             </ul>
         </div>
         <footer>
+        <a href="#" class="ft-logo">LTalk</a>
             <ul>
-                <li><a href="#" class="ft-logo">LTalk</a>
+                <li id="datetime">
+                    {{ date.raw | date:'hh mm ss' }} <span> {{ date.raw | date:'EEEE, MMMM yyyy' }}</span>
                 </li>
-                <li>
-                    <div>
-                        <div id="datetime">{{ date.raw | date:'hh mm ss' }} {{ date.raw | date:'EEEE, MMMM yyyy' }}
-                        </div>
-                    </div>
-                </li>
-                <li>Ashad 15 - National Paddy Day / Curd and Beaten Rice Eating Day</li>
             </ul>
         </footer>
     </div>

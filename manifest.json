@@ -21,7 +21,7 @@
         "newtab": "dashboard.html"
     },
     "icons": {
-        "16": "images/favicon.ico",
-        "128": "images/logo.png"
+        "72": "images/logo.png",
+        "190": "images/logo-leapfrog.png"
     }
 }

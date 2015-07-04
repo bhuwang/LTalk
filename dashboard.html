@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body ng-controller="Dashboard">
@@ -15,8 +16,8 @@
         <div class="main today-word">
             <blockquote>
                 <p>{{wordOfDay}}</p>
-                <p><span>- {{author}}</span>
-                </p>
+                <p><span>- {{author}}</span></p>
+                @all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
             </blockquote>
         </div>
         <div class="notification">
@@ -137,14 +138,10 @@
             </ul>
         </div>
         <footer>
+        <a href="#" class="ft-logo">LTalk</a>
             <ul>
-                <li><a href="#" class="ft-logo">LTalk</a>
-                </li>
-                <li>
-                    <div>
-                        <div id="datetime">{{ date.raw | date:'hh mm ss' }} {{ date.raw | date:'EEEE, MMMM yyyy' }}
-                        </div>
-                    </div>
+                <li id="datetime">
+                    {{ date.raw | date:'hh mm ss' }} {{ date.raw | date:'EEEE, MMMM yyyy' }}
                 </li>
             </ul>
         </footer>

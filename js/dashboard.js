@@ -23,13 +23,13 @@ angular.module('lms', ['ngRoute'])
                     'Content-Type': 'application/json'
                 }
             }).success(function (data) {
-                $scope.wordOfDay = response.contents.quotes[0].quote;
-                $scope.author = response.contents.quotes[0].author
+                $scope.wordOfDay = data.quote
+                $scope.author = data.author
             }).error(function (data) {
                 console.log(data);
             });
         };
-        // $scope.wordOfDay();
+        $scope.wordOfDay();
 
         // get on leave today through API
         $scope.requestOnLeaveToday = function () {
@@ -68,31 +68,37 @@ angular.module('lms', ['ngRoute'])
 
         $scope.birthdayToday();
 
-        // Display highlights of the day
-        $scope.displayHighlights = function (data) {
-          var data = '[{"message":"Hello Code for Fun, Are you ready?", "lastUpdated": "2015-07-06T00:28:43Z"},{"message":"Dear All, Please be informed that you need to withdraw your quarterly budget by tomorrow", "lastUpdated": "2015-07-06T00:28:43Z"}] '
-          $scope.highlightsData = jQuery.parseJSON( data);
-        };
 
         $scope.getHighlights = function () {
-            // $http({
-            //     method: 'GET',
-            //     url: 'http://10.10.11.16:8080/api/getHighlights'
-            //     headers: {
-            //         'apiKey': 'leapfrog',
-            //         'Content-Type': 'application/json'
-            //     }
-            // }).success(function (data) {
-            //     console.log(data);
-            //     $scope.displayHighlights(data);
-            // }).error(function (data) {
-            //     console.log(data);
-            // });
-        $scope.displayHighlights("test");
+             $http({
+                method: 'GET',
+                url: 'http://10.10.11.16:8080/api/highlights',
+                headers: {
+                    'apiKey': 'leapfrog',
+                    'Content-Type': 'application/json'
+                }
+            }).success(function (data) {
+                console.log(data);
+                $scope.highlightsData = data
+            }).error(function (data) {
+                console.log(data);
+            });
         };
         $scope.getHighlights();
 
         $scope.pushHighlights = function () {
-
+            $http({
+                method: 'GET',
+                url: 'http://10.10.11.16:8080/api/pushHighlights',
+                headers: {
+                    'apiKey': 'leapfrog',
+                    'Content-Type': 'application/json'
+                }
+            }).success(function (data) {
+                console.log(data);
+                $scope.displayHighlights(data);
+            }).error(function (data) {
+                console.log(data);
+            });
         };
     });

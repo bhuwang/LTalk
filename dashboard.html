@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
 </head>
 
 <body ng-controller="Dashboard">
@@ -20,9 +22,9 @@
             </blockquote>
         </div>
         <div class="notification">
-            <form class="form-notify">
+            <form class="form-notify" ng-submit="pushHighlights()">
                 <i class="fa fa-bell"></i>
-                <input type="text" id="notification" placeholder="Notification" autocomplete="off">
+                <input type="text" id="notification" placeholder="Notification" ng-model="notification" autocomplete="off">
             </form>
             <ul class="notice">
             <li ng-repeat="highlight in highlightsData">

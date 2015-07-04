@@ -1,5 +1,6 @@
-angular.module('lms', ['ngRoute'])
-    .controller('Dashboard', function ($scope, $http, $timeout) {
+var myDashboard = angular.module('lms', ['ngRoute']);
+
+myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
 
         // for getting current time
         // Build the date object
@@ -80,6 +81,7 @@ angular.module('lms', ['ngRoute'])
             }).success(function (data) {
                 console.log(data);
                 $scope.highlightsData = data
+                $timeout($scope.getHighlights,10000);
             }).error(function (data) {
                 console.log(data);
             });
@@ -88,17 +90,34 @@ angular.module('lms', ['ngRoute'])
 
         $scope.pushHighlights = function () {
             $http({
-                method: 'GET',
+                method: 'POST',
                 url: 'http://10.10.11.16:8080/api/pushHighlights',
+                data: $.param({highlight: $scope.notification}),
                 headers: {
                     'apiKey': 'leapfrog',
                     'Content-Type': 'application/json'
                 }
+
             }).success(function (data) {
                 console.log(data);
-                $scope.displayHighlights(data);
             }).error(function (data) {
                 console.log(data);
             });
         };
+
+   
     });
+
+// myDashboard.directive('ngEnter', function () {
+//     return function (scope, element, attrs) {
+//         element.bind("keydown keypress", function (event) {
+//             if(event.which === 13) {
+//                 scope.$apply(function (){
+//                     scope.$eval(attrs.ngEnter);
+//                 });
+
+//                 event.preventDefault();
+//             }
+//         });
+
+//     }};

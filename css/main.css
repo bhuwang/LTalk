@@ -22,7 +22,6 @@ body {
   box-sizing: border-box;
   color: white;
   outline: none;
-  overflow: hidden;
   font: 400 14px "Roboto", sans-serif;
 }
 
@@ -71,10 +70,14 @@ ul {
 }
 
 .container {
-  background: black url("../images/bg-img.jpg") no-repeat center top;
+  background: black url("../images/bg-img-1.jpg") no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   width: 100%;
   height: 100%;
+  vertical-align: middle;
   position: relative;
 }
 .container.home {
@@ -86,7 +89,7 @@ ul {
 }
 
 .div-block {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3) url("../images/pattern.png");
   position: absolute;
   left: 0;
   top: 0;
@@ -172,9 +175,12 @@ ul {
 }
 .today-word blockquote p {
   display: inline;
+  margin: 0;
+  padding: 0;
 }
 .today-word blockquote p span {
   display: block;
+  padding-top: 10px;
 }
 
 .notification {
@@ -188,6 +194,7 @@ ul {
 .notification .form-notify {
   font-size: 16px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .notification .form-notify .fa {
   float: left;
@@ -221,6 +228,7 @@ ul {
 }
 .notification .notice {
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   max-height: 400px;
   color: #cccccc;
   width: 300px;
@@ -236,7 +244,7 @@ ul {
 }
 .notification .notice li {
   clear: both;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -274,15 +282,12 @@ ul {
   font-size: 14px;
   position: relative;
 }
-.sidebar ul li:hover i {
-  background: white;
-  color: black;
-}
-.sidebar ul li:hover a {
-  color: #666666;
+.sidebar ul li a {
+  color: rgba(255, 255, 255, 0.5);
 }
 .sidebar ul li .tip {
   background: rgba(0, 0, 0, 0.9);
+  min-height: 100px;
   color: white;
   padding: 0 20px;
   position: absolute;
@@ -332,6 +337,13 @@ ul {
   right: -24px;
   top: 22px;
 }
+.sidebar ul li:hover i {
+  background: white;
+  color: black;
+}
+.sidebar ul li:hover a {
+  color: white;
+}
 .sidebar ul li:hover .bubble {
   display: block;
   visibility: visible;
@@ -339,8 +351,9 @@ ul {
 }
 .sidebar ul li:hover .bubble .tab-content {
   min-height: 100px;
-  max-height: 270px;
+  height: 300px;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .sidebar ul li:hover .bubble .tab-content:hover {
   overflow-y: scroll;
@@ -535,7 +548,6 @@ footer ul li {
   display: inline-block;
   list-style: none;
   line-height: 40px;
-  margin-right: 35px;
 }
 footer ul li:nth-child(2) {
   padding-left: 200px;

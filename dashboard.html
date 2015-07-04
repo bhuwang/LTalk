@@ -12,7 +12,6 @@
 
 
 </head>
-
 <body ng-controller="Dashboard">
     <div class="container home">
         <div class="main today-word">
@@ -27,9 +26,9 @@
                 <input type="text" id="notification" placeholder="Notification" ng-model="notification" autocomplete="off">
             </form>
             <ul class="notice">
-            <li ng-repeat="highlight in highlightsData">
-                    <p> {{highlight.message}} </p>
-            </li>
+                <li ng-repeat="highlight in highlightsData">
+                    {{highlight.message}}
+                </li>
             </ul>
         </div>
 

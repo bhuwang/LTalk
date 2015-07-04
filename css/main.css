@@ -32,7 +32,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 a a:hover, a a:focus {
-  color: #4cb95b;
+  color: #cccccc;
   text-decoration: underline;
   outline: none;
 }
@@ -43,17 +43,17 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 7px;
+  border-radius: 4px;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 7px;
+  border-radius: 4px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -257,18 +257,20 @@ ul {
   font-size: 14px;
   position: relative;
 }
+.sidebar ul li:hover i {
+  background: white;
+  color: #666666;
+}
 .sidebar ul li .tip {
   background: rgba(0, 0, 0, 0.9);
   color: white;
-  padding: 20px;
+  padding: 0 20px;
   position: absolute;
   display: none;
   opacity: 0;
   right: 110%;
   z-index: 100;
   width: 300px;
-  max-height: 400px;
-  overflow: hidden;
   top: -20%;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -280,7 +282,9 @@ ul {
   right: 98px;
   display: inline-block;
   border-left: 14px solid transparent;
+  border-bottom: 14px solid rgba(0, 0, 0, 0.9);
   border-right: 14px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
   content: '';
 }
 .sidebar ul li .tip:after {
@@ -292,9 +296,6 @@ ul {
   border-bottom: 12px solid rgba(0, 0, 0, 0.9);
   border-right: 12px solid transparent;
   content: '';
-}
-.sidebar ul li .tip:hover {
-  overflow-y: scroll;
 }
 .sidebar ul li .tip.bubble:before {
   border-top: 14px solid transparent;
@@ -316,6 +317,14 @@ ul {
   visibility: visible;
   opacity: 1;
 }
+.sidebar ul li:hover .bubble .tab-content {
+  min-height: 100px;
+  max-height: 270px;
+  overflow: hidden;
+}
+.sidebar ul li:hover .bubble .tab-content:hover {
+  overflow-y: scroll;
+}
 .sidebar ul li:hover .bubble .tab-content ul {
   margin: 0 0 0 20px;
   padding: 0;
@@ -326,9 +335,14 @@ ul {
   line-height: normal;
   list-style: decimal;
   font-size: 12px;
+  color: #cccccc;
+}
+.sidebar ul li:hover .bubble .tab-content ul li ul {
+  margin-left: 20px;
 }
 .sidebar ul li:hover .bubble .tab-content ul li ul li {
   list-style: disc;
+  color: #cccccc;
 }
 .sidebar ul li i {
   background: rgba(0, 0, 0, 0.5);
@@ -396,7 +410,7 @@ ul {
   font-size: 14px;
   line-height: normal;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 }
 .sidebar .leave li.profile h2 span {
   font-size: 10px;
@@ -423,12 +437,11 @@ ul {
 }
 .sidebar .tabs-menu li.current {
   position: relative;
-  color: white;
   z-index: 5;
-  border-bottom: 1px white solid;
+  border-bottom: 1px #2ecc71 solid;
 }
 .sidebar .tabs-menu li.current a {
-  color: white;
+  color: #2ecc71;
 }
 .sidebar .tabs-menu li a {
   color: #cccccc;

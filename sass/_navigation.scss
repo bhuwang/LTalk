@@ -12,11 +12,10 @@
         text-transform: uppercase;
         &.current {
             position: relative;
-            color: $global-white;
             z-index: 5;
-            border-bottom: 1px $global-white solid;
+            border-bottom: 1px $global-green solid;
             a {
-                color: $global-white;
+                color: $global-green;
             }
         }
         a {

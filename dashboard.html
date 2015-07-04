@@ -109,18 +109,11 @@
                     <a href="#"><i class="fa fa-birthday-cake"></i> Birthday</a>
                     <div class="tip bubble birthday">
                         <ul class="leave">
-                            <li class="profile">
-                                <img src="images/sunil-shrestha.jpg" alt="">
+                            <li ng-repeat="emp in birthdays" class="profile">
+                                <img src={{emp.avatarUrl}} alt={{emp.firstName}}>
                                 <h2>
-                                    Sunil Shrestha
-                                    <span>UI UX Department</span>
-                                </h2>
-                            </li>
-                            <li class="profile">
-                                <img src="images/bhuwan-gautam.jpg" alt="">
-                                <h2>
-                                    Bhuwan Gautam
-                                    <span>Java Department</span>
+                                    {{emp.firstName + " "+ (emp.middleName?emp.middleName:'')+" "+emp.lastName}}
+                                    <span>{{emp.department.name}} Department</span>
                                 </h2>
                             </li>
                         </ul>
@@ -132,7 +125,7 @@
                         <ul class="leave">
 
                             <li ng-repeat="employee in employees" class="profile">
-                                <img src={{employee.avatarUrl}} alt="">
+                                <img src={{employee.avatarUrl}} alt={{employee.firstName}}>
                                 <h2>
                                     {{employee.firstName + " "+ (employee.middleName?employee.middleName:'')+" "+employee.lastName}}
                                     <span>{{employee.department.name}} Department</span>

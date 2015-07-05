@@ -12,8 +12,8 @@
 
 <body ng-controller="Dashboard">
     <div class="container home">
-        <div class="main">
-            <blockquote class="today-word">
+        <div class="main today-word">
+            <blockquote>
                 <p>{{wordOfDay}}</p>
                 <p><span>- {{author}}</span>
                 </p>
@@ -24,23 +24,45 @@
                 <i class="fa fa-bell"></i>
                 <input type="text" id="notification" placeholder="Notification" autocomplete="off">
             </form>
-            <div class="notice">
-                <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
-                    <img src="images/profile-img.png" alt="Profile" class="e-profile">
-                </p>
-            </div>
-            <div class="notice">
-                <p>Please send your team name and member list ASAP.
-                    <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
-                </p>
-            </div>
+            <ul class="notice">
+                <li>
+                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
+                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+                <li>
+                    <p>Please send your team name and member list ASAP.
+                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+                <li>
+                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
+                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+                <li>
+                    <p>Please send your team name and member list ASAP.
+                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+                <li>
+                    <p>@all Groups who have not send me names for team recreation fund today is the last day. I will not be processing for the budget release from tomorrow. you are requested to submit the invoices by 28th Asad 2072 after your team building.
+                        <img src="images/profile-img.png" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+                <li>
+                    <p>Please send your team name and member list ASAP.
+                        <img src="images/yaju-pradhan.jpg" alt="Profile" class="e-profile">
+                    </p>
+                </li>
+            </ul>
         </div>
 
         <div class="sidebar">
             <ul>
                 <li>
                     <a href="#"><i class="fa fa-eye"></i> Core Values</a>
-                    <div class="bubble">
+                    <div class="tip bubble">
                         <ul class="tabs-menu">
                             <li class="current"><a href="#tab-1">Mission</a>
                             </li>
@@ -85,7 +107,7 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-birthday-cake"></i> Birthday</a>
-                    <div class="bubble birthday">
+                    <div class="tip bubble birthday">
                         <ul class="leave">
                             <li class="profile">
                                 <img src="images/sunil-shrestha.jpg" alt="">
@@ -106,7 +128,7 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-calendar"></i> Leave Today</a>
-                    <div class="bubble">
+                    <div class="tip bubble">
                         <ul class="leave">
 
                             <li ng-repeat="employee in employees" class="profile">

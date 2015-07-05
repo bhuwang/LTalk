@@ -170,13 +170,13 @@ ul {
   position: absolute;
   left: 20px;
   top: 20px;
-  width: 300px;
+  width: 290px;
+  padding-right: 10px;
   z-index: 2;
 }
 .notification .form-notify {
   font-size: 16px;
   margin-bottom: 15px;
-  width: 100%;
 }
 .notification .form-notify .fa {
   float: left;
@@ -204,13 +204,13 @@ ul {
 }
 .notification .notice {
   overflow: hidden;
-  width: 300px;
   max-height: 400px;
   color: #cccccc;
+  width: 300px;
+  padding-right: 10px;
 }
 .notification .notice:hover {
   overflow-y: auto;
-  padding-right: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -267,6 +267,8 @@ ul {
   right: 110%;
   z-index: 100;
   width: 300px;
+  max-height: 400px;
+  overflow: hidden;
   top: -20%;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -291,9 +293,14 @@ ul {
   border-right: 12px solid transparent;
   content: '';
 }
+.sidebar ul li .tip:hover {
+  overflow-y: scroll;
+}
 .sidebar ul li .tip.bubble:before {
   border-top: 14px solid transparent;
+  border-left: 14px solid rgba(0, 0, 0, 0.9);
   border-bottom: 14px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.2);
   right: -28px;
   top: 20px;
 }

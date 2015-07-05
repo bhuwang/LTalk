@@ -40,4 +40,23 @@ angular.module('lms', ['ngRoute'])
 
         $scope.requestOnLeaveToday();
 
+        // get birthday today through API
+        $scope.birthdayToday = function () {
+            $http({
+                method: 'GET',
+                url: 'http://10.10.11.16:8080/api/birthdaytoday',
+                headers: {
+                    'apiKey': 'leapfrog',
+                    'Content-Type': 'application/json'
+                }
+            }).success(function (data) {
+                console.log(data);
+                $scope.birthdays = data;
+            }).error(function (data) {
+                console.log(data);
+            });
+        };
+
+        $scope.birthdayToday();
+
     });

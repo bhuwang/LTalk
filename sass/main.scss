@@ -248,7 +248,7 @@ ul{
             }
             .tip {
                 background: rgba(0,0,0,0.9);
-                min-height: 100px;
+                min-height: 70px;
                 color: $global-white;
                 padding: 0 20px;
                 position: absolute;
@@ -376,6 +376,15 @@ ul{
     &:after{
         border-left: 12px solid rgba(230,75,60,1);
         color: $global-white;
+    }
+    .msg-info{
+        padding: 10px 0;
+        .fa{
+            font-size: 16px;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
     }
 }
 

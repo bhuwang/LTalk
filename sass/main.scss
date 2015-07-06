@@ -312,6 +312,15 @@ ul{
                     display: block;
                     visibility: visible;
                     opacity: 1;
+                    .msg-info{
+                        padding: 10px 0;
+                        .fa{
+                            font-size: 16px;
+                            width: 25px;
+                            height: 25px;
+                            line-height: 25px;
+                        }
+                    }
                     .tab-content {
                         min-height: 100px;
                         height: 300px;
@@ -382,15 +391,6 @@ ul{
 
 .sidebar .leave{
     margin:0; padding: 0;
-    .msg-info{
-        padding: 10px 0;
-        .fa{
-            font-size: 16px;
-            width: 25px;
-            height: 25px;
-            line-height: 25px;
-        }
-    }
     li{
         width: $width-default;
         line-height: normal;

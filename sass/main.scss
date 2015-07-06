@@ -377,6 +377,11 @@ ul{
         border-left: 12px solid rgba(230,75,60,1);
         color: $global-white;
     }
+}
+
+
+.sidebar .leave{
+    margin:0; padding: 0;
     .msg-info{
         padding: 10px 0;
         .fa{
@@ -386,11 +391,6 @@ ul{
             line-height: 25px;
         }
     }
-}
-
-
-.sidebar .leave{
-    margin:0; padding: 0;
     li{
         width: $width-default;
         line-height: normal;

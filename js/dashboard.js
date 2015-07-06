@@ -19,7 +19,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.wordOfDay = function () {
             $http({
                 method: 'GET',
-                url: 'http://10.10.11.16:8080/api/quoteoftheday',
+                url: 'http://10.10.10.56:8080/api/quoteoftheday',
                 headers: {
                     'apiKey': 'leapfrog',
                     'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.requestOnLeaveToday = function () {
             $http({
                 method: 'GET',
-                url: 'http://10.10.11.16:8080/api/onleavetoday',
+                url: 'http://10.10.10.56:8080/api/onleavetoday',
                 headers: {
                     'apiKey': 'leapfrog',
                     'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.birthdayToday = function () {
             $http({
                 method: 'GET',
-                url: 'http://10.10.11.16:8080/api/birthdaytoday',
+                url: 'http://10.10.10.56:8080/api/birthdaytoday',
                 headers: {
                     'apiKey': 'leapfrog',
                     'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.getHighlights = function () {
              $http({
                 method: 'GET',
-                url: 'http://10.10.11.16:8080/api/highlights',
+                url: 'http://10.10.10.56:8080/api/highlights',
                 headers: {
                     'apiKey': 'leapfrog',
                     'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
         $scope.pushHighlights = function () {
             $http({
                 method: 'POST',
-                url: 'http://10.10.11.16:8080/api/pushhighlights?message='+$scope.notification,
+                url: 'http://10.10.10.56:8080/api/pushhighlights?message='+$scope.notification,
                 headers: {
                     'apiKey': 'leapfrog'
                 }

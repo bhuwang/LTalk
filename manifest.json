@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "LTalk",
-    "description": "LTalk - Your Companion",
+    "name": "Leapfrog Talk",
+    "description": "Leapfrog Talk - Your Companion",
     "version": "0.1",
     "oauth2": {
         "client_id": "329152280119-ergpn5gjq8hfkf6ru97rfl3dckfkcoph.apps.googleusercontent.com",
@@ -15,13 +15,12 @@
   "https://ssl.gstatic.com/",
   "https://www.googleapis.com/",
   "https://accounts.google.com/",
-    "http://10.10.11.16:8080/api/onleavetoday"],
+    "http://10.10.10.56:8080/api/onleavetoday"],
     "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
     "chrome_url_overrides": {
         "newtab": "dashboard.html"
     },
     "icons": {
-        "72": "images/logo.png",
-        "190": "images/logo-leapfrog.png"
+        "128": "images/logo.png"
     }
 }

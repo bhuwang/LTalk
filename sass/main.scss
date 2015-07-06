@@ -53,9 +53,9 @@ ul{
 .container{
     background: #000 url("../images/bg-img-1.jpg") no-repeat center top;
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: $width-default;
     height: $width-default;
     vertical-align: middle;
@@ -71,7 +71,7 @@ ul{
 }
 
 .div-block{
-    background: rgba(0,0,0,0.3) url("../images/pattern.png");
+    background: rgba(0,0,0,0.1) url("../images/pattern.png");
     position: absolute;
     left: 0; top: 0;
     width: $width-default;

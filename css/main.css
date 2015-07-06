@@ -89,7 +89,7 @@ ul {
 }
 
 .div-block {
-  background: rgba(0, 0, 0, 0.3) url("../images/pattern.png");
+  background: rgba(0, 0, 0, 0.1) url("../images/pattern.png");
   position: absolute;
   left: 0;
   top: 0;

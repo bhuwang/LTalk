@@ -92,19 +92,21 @@ myDashboard.controller('Dashboard', function ($scope, $http, $timeout) {
 
     // push new highlights
     $scope.pushHighlights = function () {
-        $http({
-            method: 'POST',
-            url: 'http://10.10.10.56:8080/api/pushhighlights?message=' + $scope.notification,
-            headers: {
-                'apiKey': 'leapfrog'
-            }
+        if ($scope.notification) {
+            $http({
+                method: 'POST',
+                url: 'http://10.10.10.56:8080/api/pushhighlights?message=' + $scope.notification,
+                headers: {
+                    'apiKey': 'leapfrog'
+                }
 
-        }).success(function (data) {
-            console.log(data);
-            $scope.notification = "";
-        }).error(function (data) {
-            console.log(data);
-        });
+            }).success(function (data) {
+                console.log(data);
+                $scope.notification = "";
+            }).error(function (data) {
+                console.log(data);
+            });
+        }
     };
 
 });

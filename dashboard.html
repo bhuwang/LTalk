@@ -12,12 +12,14 @@
 
 
 </head>
+
 <body ng-controller="Dashboard">
     <div class="container home">
         <div class="main today-word">
             <blockquote>
                 <p>{{wordOfDay}}</p>
-                <p><span>- {{author}}</span></p>
+                <p><span>- {{author}}</span>
+                </p>
             </blockquote>
         </div>
         <div class="notification">
@@ -82,7 +84,7 @@
                 <li>
                     <a href="#"><i class="fa fa-birthday-cake"></i> Birthdays</a>
                     <div class="tip bubble birthday">
-                        <ul class="leave">
+                        <ul class="leave" ng-if="birthdays.length != 0">
                             <li ng-repeat="emp in birthdays" class="profile">
                                 <img src={{emp.avatarUrl}} alt={{emp.firstName}}>
                                 <h2>
@@ -91,14 +93,13 @@
                                 </h2>
                             </li>
                         </ul>
-                        <div class="msg-info"><i class="fa fa-info"></i> No Birthday</div>
+                        <div class="msg-info" ng-if="birthdays.length === 0"><i class="fa fa-info"></i>No birthdays today.</div>
                     </div>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-calendar"></i> Leave Today</a>
                     <div class="tip bubble">
-                        <ul class="leave">
-
+                        <ul class="leave" ng-if="employees.length != 0">
                             <li ng-repeat="employee in employees" class="profile">
                                 <img src={{employee.avatarUrl}} alt={{employee.firstName}}>
                                 <h2>
@@ -107,12 +108,13 @@
                                 </h2>
                             </li>
                         </ul>
+                        <div class="msg-info" ng-if="employees.length === 0"><i class="fa fa-info"></i>No one is on leave today.</div>
                     </div>
                 </li>
             </ul>
         </div>
         <footer>
-        <a href="#" class="ft-logo">LTalk</a>
+            <a href="#" class="ft-logo">LTalk</a>
             <ul>
                 <li id="datetime">
                     {{ date.raw | date:'hh mm ss' }} <span> {{ date.raw | date:'EEEE, MMMM yyyy' }}</span>
